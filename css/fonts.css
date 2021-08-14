@@ -1,0 +1,17 @@
+/** BebasNeue Header font **/
+@font-face {
+    font-family: BebasNeue;
+    src: url('/fonts/BebasNeue-Regular.ttf');
+}
+
+/** Abel body font **/
+@font-face {
+    font-family: Abel;
+    src: url(/fonts/Abel-Regular.ttf);
+}
+
+/** Josefin font **/
+@font-face {
+    font-family: Jose;
+    src: url(/fonts/JosefinSans-Regular.ttf);
+}

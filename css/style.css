@@ -1,0 +1,271 @@
+
+@import url('/css/fonts.css');
+
+
+html, body{
+    margin:0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /*background-color: #0f0f0f;*/
+}
+
+
+:root{
+    /* theme font variables */
+    --Bebas: 'BebasNeue', cursive;
+    --Abel: 'Abel', cursive;
+    --Jose: 'Jose', cursive;
+
+    /* theme colors */
+    --grey: #3f4954;
+    --aqua: #81d2c7;
+    --black: #0f0f0f;
+    --white: #fff;
+    --midnight: #104f55;
+
+    /* theme gradients colors */
+    --rain: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    --azure: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    --sky: linear-gradient(120deg, #a1c4fd , #c2e9fb );
+    --darkblue: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    --plum: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --pinkred: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    --chelsea: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    --blossom: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+}   
+
+
+/*---------Global Classes----------*/
+
+a{
+    text-decoration: none;
+    color: var(--grey);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Jose);
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.6rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Bebas);
+    cursor: pointer;
+}
+
+/*----x----Global Classes------x---*/
+
+/*---------Navigation----------*/
+
+.nav{
+    background: white;
+    padding: 0.2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--grey);
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+
+.nav .nav-brand a{
+    font-size: 1.8rem;
+    padding: 1rem 0.5rem;
+    display: block;
+    font-family: var(--Bebas);
+    font-size: 1.8rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0.3rem;
+}
+
+.nav .social i:hover{
+    color: var(--grey);
+}
+/*----x----Navigation------x---*/
+
+
+/*             Main Content               */
+
+main .site-title{
+    background: url('/assets/bg/pexels-aleksey-kuprikov-3493777.jpg');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-bg{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--midnight);
+}
+
+main .site-title h1, h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--midnight);
+    color: var(--midnight);
+}
+
+/*        X    Main Content      X        */
+
+/*            Blog Carosel              */
+
+main.blog{
+    background: url(/assets/Abract01.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+}
+
+main .bloog .blog-post{
+    padding-top: 6rem;
+
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+}
+
+/*  viewport < than or = to 750px  */
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+
+/*    Animation    *
+*
+{
+    margin:0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Abel);
+}
+
+.circle{
+    transform-style: preserve-3d;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+}
+
+.circle .char{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff005e;
+    color:var(--white);
+    font-size: 4em;
+    padding: 5px 12px;
+    border-top: 10px solid var(--white);
+    border-bottom: 10px solid var(--white);
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--char-index) * 12deg))
+    translateZ(250px);
+    text-shadow: 500px 150px 0 rgba(255,255, 255, 0.5),
+    300px 300px 0 rgba(255,255, 255, 0.5),
+    500px -150px 0 rgba(255,255, 255, 0.5),
+    300px -300px 0 rgba(255,255, 255, 0.5)
+}
+/*
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+    }
+}

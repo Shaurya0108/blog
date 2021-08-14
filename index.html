@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sure Yeah's Blog</title>
+
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="/css/all.css">
+
+    <!--Custom Sytle-->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
+    <!--Custom Animation-->
+
+</head>
+<body id="home">
+
+    <!---------Navigation---------->
+
+    <!-- .myclass + (tab) = <div class="myclass"></div> -->
+
+    <!-- #div + (tab) = <div id="div"></div> -->
+
+    <!-- a.myclass + (tab) = <a href="" class="myclass"></a> -->
+
+    <!-- a#myid + (tab) = <a href="" id="myid"></a> -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-grey">Sure Yeah's Blog</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">Category</a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">Archive</a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">Pages</a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-grey">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-youtube-square"></i></a>
+            </div>
+         
+        </div>
+    </nav>
+    <!---x-----Navigation-----x---->  
+
+
+
+    <!--------------Main Site Section----------------->
+    <main>
+        <!--site Title-->
+        <section class="site-title">
+            <div class="site-bg">
+                <h3>Stuff</h3>
+                <h1>More Stuff</h1>
+                <button class="btn">Read</button>
+            </div>
+        </section>
+
+        <!--Blog Carousel-->
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content">
+                            <img src="/assets/Blog-post/post-1.jpg" alt="post-1">
+                        <div class = "blog-title">
+                            <h3>New stuff I guess</h3>
+                            <button class="btn btn-blog">Stuff Pt. 2</button>
+                            <span>2 minutes</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <!--
+    <div class = "circle" data-splitting>
+        EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+    </div>   -->
+    <!--JQuery Library-->
+    <script src="/js/jquery3.6.0.min.js"></script>
+
+    <script src="/js/owl.carousel.min.js"></script>
+
+    <!--Custom Javascript-->
+    <script src="/js/main.js"></script>
+
+    
+
+    <!--Custom Animation-->
+    <script src="/js/splitting.js"></script>
+    <script> Splitting();</script> 
+    <script> let circle = document.querySelector('.circle')
+    window.onmousemove = function(e){
+        let x = e.clientX/-2;
+        circle.style.transform = "perspective(1000px) rotateY(" + x + "deg) rotateX(15deg)";
+    }
+    </script> 
+</body>
+</html>
